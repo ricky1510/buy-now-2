@@ -1,0 +1,114 @@
+body
+    padding: 0
+    margin: 0
+    width: 100%
+    font-family: verdana
+
+.container
+    width: 100%
+    margin-left: auto
+    background-color: #f1f1f1
+    margin-right: auto
+    height: 6000px
+    transform-origin: top center
+    transition: transform 0.3s
+
+.buy-now
+    width: 100%
+    background-color: #fff
+    padding: 5px
+
+.close
+    position: absolute
+    appearance: none
+    border: none
+    top: 0
+    right: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: transparent
+    padding: 0
+    margin: 0
+    cursor: pointer
+    width: 40px
+    height: 40px
+
+.select-size
+    font-weight: bold
+    margin-bottom: 10px
+    display: block
+
+.sticky
+    bottom: 0
+    position: sticky
+
+.button__wrapper
+    padding-left: 5px
+    padding-right: 5px
+    padding-top: 5px
+
+.button
+    width: 100%
+    appearance: none
+    border: none
+    background-color: #000
+    color: #fff
+    height: 50px
+    font-size: 18px
+    cursor: pointer
+    border-radius: 3px
+    &.disabled
+        background-color: #ebebeb
+        color: #b7b7b7
+
+.add-to-cart
+    width: 100%
+    padding: 5px 0
+    background-color: #fff
+    top: 100%
+    transition: transform 0.3s
+
+.sizes
+    display: flex
+    padding-bottom: 5px
+    overflow-x: auto
+    -webkit-overflow-scrolling: touch
+    &:before,
+    &:after
+        flex-shrink: 0
+        content: ""
+        width: 5px
+
+.size
+    font-size: 18px
+    flex-shrink: 0
+    
+.size-label
+    height: 40px
+    width: 40px
+    position: relative
+    cursor: pointer
+    flex-shrink: 0
+    + .size-label
+        margin-left: 5px
+
+.size-radio
+    position: absolute
+    z-index: -1
+    &:checked
+        + .radio-faux
+            background-color: #000
+            color: #fff
+
+.radio-faux
+    width: 100%
+    background-color: #dcdcdc
+    color: #000
+    display: flex
+    align-items: center
+    border-radius: 3px
+    position: relative
+    z-index: 10
+    justify-content: center
+    height: 100%
